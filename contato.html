@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="stylec.css" />
+    <title>Contato</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="principal.html" class="logo">Principal</a>
+      <div class="header-right">
+        <a href="atividades.html">Atividades</a>
+        <a class="active" href="contato.html">Contato</a>
+        <a href="local.html">Localização</a>
+      </div>
+    </div>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/Contato">Contato</a></li>
+      <li class="breadcrumb-item active">Preencha o formulário</li>
+    </ol>
+    <div id="outField" class="container">
+      <div id="everything">
+        <form action="obrigado.html" method="get" id="formulario" name="formulario" autocomplete="on">
+          <div>
+            <label for="nome">Nome:</label>
+            <input name="nome" type="text" id="nome" placeholder="Nome" />
+            <span class="warning" id="iNome"></span>
+          </div>
+
+          <div>
+            <label for="email">E-mail:</label>
+            <input name="email" type="email" id="email" placeholder="E-mail" />
+            <span class="warning" id="iEmail"></span>
+          </div>
+
+          <div>
+            <label for="date">Data do envio:</label>
+            <input name="date" type="date" id="date" />
+            <span class="warning" id="iDate"></span>
+          </div>
+
+          <div>
+            <label for="sexo">Sexo:</label>
+            <input
+              class="checado"
+              id="masc"
+              type="radio"
+              name="cat"
+              value="Masculino"
+            />
+            <label for="cat">Masculino</label>
+            <input
+              class="checado"
+              id="fem"
+              type="radio"
+              name="cat"
+              value="Feminino"
+            />
+            <label for="cat5">Feminino</label>
+            <input
+              class="checado"
+              id="nbin"
+              type="radio"
+              name="cat"
+              value="Não-binário"
+            />
+            <label for="cat3">Não-binário</label>
+            <input
+              class="checado"
+              id="cat3"
+              type="radio"
+              name="cat"
+              value="Prefiro não informar"
+            />
+            <label id="ninf" name="cat" for="cat">Prefiro não informar</label>
+          </div>
+          <span class="warning" id="iSex"></span>
+
+          <fieldset>
+            <legend>Do que se trata o contato?</legend>
+            <div>
+              <input
+                class="checado"
+                name="conts"
+                type="checkbox"
+                id="doubt"
+                value="Dúvida"
+              />
+              <label for="doubt">Dúvida</label>
+            </div>
+
+            <div>
+              <input
+                class="checado"
+                name="conts"
+                type="checkbox"
+                id="complaint"
+                value="Reclamação"
+              />
+              <label for="complaint">Reclamação</label>
+            </div>
+
+            <div>
+              <input
+                class="checado"
+                name="conts"
+                type="checkbox"
+                id="sugestion"
+                value="Sugestão"
+              />
+              <label name="opcontato" for="sugestion">Sugestão</label>
+            </div>
+            <span class="warning" id="iOp"></span>
+
+            <div>
+              <label for="msg">Mensagem:</label>
+              <textarea
+                name="text"
+                maxlength="2000"
+                rows="20"
+                cols="100"
+                id="msg"
+              ></textarea>
+            </div>
+
+            <div>
+              <label for="arq">Anexar imagem:</label>
+              <input class="button" type="file" id="arq" multiple />
+            </div>
+        <button type="button" onclick="valida()">Validar</button>
+        <br />
+      </div>
+
+      <div id="info" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Informações</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Fechar"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <li id="nomes"></li>
+              <li id="emails"></li>
+              <li id="datas"></li>
+              <li id="sexos"></li>
+              <li id="contatos"></li>
+            </div>
+            <div class="modal-footer">
+              <button type="reset" id="reset" onclick="resetar()">
+                Reiniciar
+              </button>
+              <button type="button" onclick="alterar()">Alterar</button>
+              <button type="submit" id="envia">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="jumbotron">
+      <u>ATENÇÃO</u>: Mensagens consideradas SPAM não serão respondidas!
+    </div>
+  </fieldset>
+</form>
+</div>
+
+    <footer>
+      Informações de contato - Número: (##) #####-#### - E-mail: ######@###.##
+    </footer>
+  </body>
+</html>

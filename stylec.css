@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    background-color: #201b2c;
+}
+
+form {
+    background-color: #201b2c;
+}
+
+.adjust {
+  width: 30vw;
+}
+
+.title {
+  color:#77ffc0;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+.align {
+  text-align: center;
+}
+
+.adjust-img {
+  text-align: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+}
+
+footer {
+  background-color: #201b2c;
+  color:#77ffc0a4;
+  text-align: center;
+  border: none;
+}
+
+.jumbotron {
+  color: #201b2c;
+}
+
+.warning {
+  color: red;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    display: none;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-style: dotted;
+
+}
+
+
+.button {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+select {
+    background-color: #201b2c;
+    color: #77ffc0;
+}
+
+label {
+    color: #77ffc0a4;
+}
+
+legend {
+    color: #77ffc0;
+}
+
+textarea {
+    background-color: #201b2c;
+    color: #77ffc0;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #2f2841;
+    padding: 20px 10px;
+    border: none;
+  }
+  
+  /* estiliza os links */
+  .header a {
+    float: left;
+    color: #77ffc0;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  /* muda a cor onde o mouse tá em cima */
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* estiliza o link atual*/
+  .header a.active {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* flutua os links pra direita */
+  .header-right {
+    float: right;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
